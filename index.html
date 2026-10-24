@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayNest | Luxury Hotel Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="logo">▣ Stay<span>Nest</span></a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#footer">Contact</a>
+      <a href="#booking" class="nav-btn">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow light">WELCOME TO STAYNEST</p>
+        <h1>A calm place to rest,<br>
+          wherever the road<br>leads.</h1>
+        <p class="hero-text">
+          Spacious rooms, refined hospitality and a beautiful
+          escape from the everyday.
+        </p>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn btn-gold">Find Your Stay ↗</a>
+          <a href="#rooms" class="btn btn-outline">Explore Rooms</a>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form class="booking-form" id="booking">
+        <div class="form-field">
+          <label for="checkin">CHECK-IN</label>
+          <input type="date" id="checkin" required>
+        </div>
+
+        <div class="form-field">
+          <label for="checkout">CHECK-OUT</label>
+          <input type="date" id="checkout" required>
+        </div>
+
+        <div class="form-field">
+          <label for="guests">GUESTS</label>
+          <select id="guests">
+            <option value="1">1 Adult</option>
+            <option value="2" selected>2 Adults</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="roomType">ROOM TYPE</label>
+          <select id="roomType">
+            <option value="Any room">Any room</option>
+            <option value="Deluxe King Room">Deluxe King</option>
+            <option value="Executive Suite">Executive Suite</option>
+            <option value="Family Room">Family Room</option>
+          </select>
+        </div>
+
+        <button class="btn booking-btn" type="submit">
+          Check Availability
+        </button>
+      </form>
+    </section>
+
+    <!-- Featured Rooms -->
+    <section class="section" id="rooms">
+      <div class="section-heading">
+        <p class="eyebrow">OUR ROOMS</p>
+        <h2>Featured rooms &amp; suites</h2>
+        <p>Each room is designed for good sleep, refined light and a little extra space.</p>
+      </div>
+
+      <div class="room-grid">
+        <article class="room-card">
+          <div class="room-image">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Deluxe king hotel room">
+            <span class="tag">Most Popular</span>
+          </div>
+          <div class="room-info">
+            <div class="room-title">
+              <h3>Deluxe King Room</h3><span>★★★★★</span>
+            </div>
+            <p>30 m² · King bed · City view</p>
+            <p class="description">A bright, restful room with a king bed, warm details and a view over the garden.</p>
+            <div class="room-bottom">
+              <p><strong>₹4,500</strong> / night</p>
+              <button class="btn small-btn book-room" data-room="Deluxe King Room">Book Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-image">
+            <img src="https://images.unsplash.com/photo-1611892440504-0a7c3f6f8c5a?auto=format&fit=crop&w=800&q=80" alt="Executive suite">
+            <span class="tag">Suite</span>
+          </div>
+          <div class="room-info">
+            <div class="room-title">
+              <h3>Executive Suite</h3><span>★★★★★</span>
+            </div>
+            <p>45 m² · Separate lounge · King bed</p>
+            <p class="description">A spacious suite with a comfortable lounge and elegant contemporary interiors.</p>
+            <div class="room-bottom">
+              <p><strong>₹7,200</strong> / night</p>
+              <button class="btn small-btn book-room" data-room="Executive Suite">Book Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-image">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Family hotel room">
+            <span class="tag">Family</span>
+          </div>
+          <div class="room-info">
+            <div class="room-title">
+              <h3>Family Room</h3><span>★★★★★</span>
+            </div>
+            <p>42 m² · 2 beds · Guest-friendly</p>
+            <p class="description">Extra space, comfortable beds and thoughtful amenities for a relaxed family stay.</p>
+            <div class="room-bottom">
+              <p><strong>₹6,000</strong> / night</p>
+              <button class="btn small-btn book-room" data-room="Family Room">Book Now</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="center">
+        <a href="#booking" class="btn btn-light">View All Rooms</a>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="section amenities" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">WHY STAYNEST</p>
+        <h2>Little things done well</h2>
+      </div>
+
+      <div class="amenity-grid">
+        <article class="amenity-card">
+          <div class="amenity-icon">⌁</div>
+          <h3>Free Wi-Fi</h3>
+          <p>Stay connected with complimentary high-speed internet.</p>
+        </article>
+        <article class="amenity-card">
+          <div class="amenity-icon">☕</div>
+          <h3>Fresh Breakfast</h3>
+          <p>Start your day with a delicious morning breakfast.</p>
+        </article>
+        <article class="amenity-card">
+          <div class="amenity-icon">≋</div>
+          <h3>Swimming Pool</h3>
+          <p>Relax and unwind in our refreshing swimming pool.</p>
+        </article>
+        <article class="amenity-card">
+          <div class="amenity-icon">♧</div>
+          <h3>Free Parking</h3>
+          <p>Convenient parking for a comfortable arrival.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="section offers" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">SPECIAL OFFERS</p>
+        <h2>Make your stay go further</h2>
+      </div>
+
+      <div class="offer-grid">
+        <article class="offer-card">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Resort pool">
+          <div class="offer-info">
+            <span class="tag">Save 20%</span>
+            <h3>Weekend Escape</h3>
+            <p>Enjoy a refreshing stay with a special weekend offer.</p>
+            <a href="#booking" class="btn small-btn">Claim Offer</a>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Romantic dinner">
+          <div class="offer-info">
+            <span class="tag">Special Deal</span>
+            <h3>Romantic Retreat</h3>
+            <p>Make your trip special with a relaxing stay and dining experience.</p>
+            <a href="#booking" class="btn small-btn">Claim Offer</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">GALLERY</p>
+        <h2>A glimpse of StayNest</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80" alt="Hotel swimming pool">
+        <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=700&q=80" alt="Resort poolside">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80" alt="Hotel bedroom">
+        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80" alt="Mountain retreat">
+      </div>
+
+      <div class="center">
+        <a href="#gallery" class="btn btn-light">Explore Gallery</a>
+      </div>
+    </section>
+
+    <!-- Guest Reviews -->
+    <section class="section" id="reviews">
+      <div class="section-heading">
+        <p class="eyebrow">GUEST REVIEWS</p>
+        <h2>Kind words from our guests</h2>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"The room was beautiful, the staff were friendly and the stay was peaceful. I would happily visit again."</p>
+          <div class="reviewer"><span>AM</span><div><h4>Amaya Mehta</h4><small>Verified Guest</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Perfect for a relaxing trip. Great rooms, quality service and a delightful breakfast. Worth the visit."</p>
+          <div class="reviewer"><span>VK</span><div><h4>Vikram Khanna</h4><small>Verified Guest</small></div></div>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"We celebrated an anniversary here. The staff were thoughtful and every detail was well taken care of."</p>
+          <div class="reviewer"><span>SM</span><div><h4>Sara Mehra</h4><small>Verified Guest</small></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="logo">▣ Stay<span>Nest</span></a>
+        <p>A calm, thoughtful stay with comfortable rooms, good food and warm service to come back to.</p>
+        <div class="social-links">
+          <a href="#footer" aria-label="Facebook">f</a>
+          <a href="#footer" aria-label="Instagram">◎</a>
+          <a href="#footer" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+
+      <div>
+        <h4>Guest Info</h4>
+        <a href="#booking">Book a Stay</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#services">Facilities</a>
+        <a href="#footer">Login / Register</a>
+        <a href="#footer">Contact</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>⌖ &nbsp; Your City, India</p>
+        <p>☎ &nbsp; +91 98765 43210</p>
+        <p>✉ &nbsp; hello@staynest.example</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2026 StayNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
